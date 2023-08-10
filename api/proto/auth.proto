@@ -1,0 +1,13 @@
+syntax="proto3";
+option go_package="proto/";
+service auth{
+  rpc Create(UserRequest) returns(UserResponse);
+}
+message UserRequest{
+  string Name=1;
+  string Username=2;
+  string Password=3;
+}
+message UserResponse{
+  string id=1;
+}
